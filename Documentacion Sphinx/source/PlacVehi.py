@@ -1,9 +1,9 @@
 """
-Universidad Latina de Panama
-Programación III
-DOcente: Abdiel Gadiel Martinez
-Autor: César Beltran
-Diciembre 2020
+Universidad Latina de Panama - Programación III
+
+Docente: Abdiel Gadiel Martinez
+
+>>> Diciembre 2020
 """
 import os
 def clear():
@@ -18,6 +18,7 @@ def clear():
 def EsNumerico(entrada):
     """
     :Retorna falso / verdadero
+    >> Al ingresar un caracter la funcion determina si es numero o no
     """
     if entrada in ['0','1','2','3','4','5','6','7','8','9']:
          Numero= True
@@ -27,50 +28,52 @@ def EsNumerico(entrada):
 #Funcion para Validar la placa
 def Valida (Cadena):
     """
-
     :param Cadena: Placa ingresada por el usuario
     :return: Tipo de vehiculo
+
+        >>>:letras: Esta variable lleva la cuenta de cuan tas letras tiene la placa
+
+        >>>:EsNumero: Inicializacion de la variable para determinar si un caracter es numerico
+
+        >>>:Mensaje: Inicializacion de la variable que retornara el mensaje
+
+        >>>:i : Recorre toda la cadena escrita en el programa
+
+        >>>:Caracter: Contiene el caracter de la cadena en la posicion i
+
+        >>>:Si el carcter es numerico busca en las listas con una constante .1,
+
+        >>>:si lo encuentra en el diccionario el numero es valido enl a posicion
+
+        >>>:Si el primer caracter i==0 es numerico le indica al programa que inicia por numero la cadena, de lo contrario
+
+        >>>:inicia el conteo de letras
+
+        >>>Busca el caracter en un diccionario diseñado con las PRIMERAS letras validas para las placas investigadas.
+
+        >>>Cuando el caracter no es encontrado en la  posicion Retorna una linea celeste e informa que el
+
+        >>>caracter no es valido
+
+
     """
     letras = 0
-    """
-    :letras: Esta variuable lleva la cuenta de cuan tas letras tiene la placa
-    """
+
     EsNumero = False
     Mensaje =""
-    """
-    :EsNumero: Inicializacion de la variable para determinar si un caracter es numerico
-    :Mensaje: Inicializacion de la variable que retornara el mensaje   
-    """
     for i, caracter in enumerate(Cadena):
         Caracter = Cadena[i]
-        """
-        :i : Recorre toda la cadena escrita en el programa
-        :Caracter: Contiene el caracter de la cadena en la posicion i
-        """
         if EsNumerico(Caracter):
-            """
-            Si el carcter es numerico busca en las listas con una constante .1,
-            si lo encuentra en el diccionario el numero es valido enl a posicion
-            """
             Caracter = '.1'
             EsNumero = True
 
         if i == 0:
-            """
-            Si el primer caracter i==0 es numerico le indica al programa que inicia por numero la cadena, de lo contrario
-            inicia el conteo de letras
-            """
             if Caracter == '.1':
                 iniciaconnumero = True
             else:
                 iniciaconnumero = False
                 letras = letras + 1
             Valor = PrimerCaracter.get(Caracter)
-            """
-            Busca el caracter en un diccionario diseñado con las PRIMERAS letras validas para las placas investigadas.
-            Cuando el caracter no es encontrado en la  posicion Retorna una linea celeste e informa que el 
-            caracter no es valido 
-            """
 
             if Valor is None:
                 print ("\033[11;0H"+"\033[0;34;44m"+u"\u2588"*80+"\033[0m")
@@ -79,7 +82,7 @@ def Valida (Cadena):
 
         if i == 1 and not Valor is None:
             """
-            Entra si el primer caracter es valido.
+            ...Entra si el primer caracter es valido.
             Si el segundo caracter i==1 No es numerico incrementa el conteo de las letras
             """
             if EsNumero == False:
