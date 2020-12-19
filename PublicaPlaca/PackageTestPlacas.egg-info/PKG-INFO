@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: PackageTestPlacas
+Version: -1-
+Summary: Testea programa de placas
+Home-page: https://github.com/cebltran/Programacion-III---UL/tree/master/PublicaPlaca
+Author: Cesar Beltran
+Author-email: cesarbeltran.co@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6

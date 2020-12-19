@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+Package/PlacVehi.py
+Package/__init__.py
+PackageTestPlacas.egg-info/PKG-INFO
+PackageTestPlacas.egg-info/SOURCES.txt
+PackageTestPlacas.egg-info/dependency_links.txt
+PackageTestPlacas.egg-info/top_level.txt
