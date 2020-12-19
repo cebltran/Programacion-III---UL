@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='PackageTestPlacas',
-    version=['1'],
+    version=["V1"],
     author='Cesar Beltran',
     author_email='cesarbeltran.co@gmail.com',
     description='Testea programa de placas',
